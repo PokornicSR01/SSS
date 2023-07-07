@@ -1,0 +1,51 @@
+﻿<Window x:Class="SSS_Projekat_Miju.Windows.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SSS_Projekat_Miju.Windows"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="200" Width="400" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+            <GradientStop Color="YellowGreen" Offset="0.25" />
+            <GradientStop Color="WhiteSmoke" Offset="1.5" />
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button Height="30" Width="80" Name="btnKlijent" Click="btnKlijent_Click" Content="Klijent" Grid.Column="0" Grid.Row="0" Background="White">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Height="30" Width="80" Name="btnTrener" Click="btnTrener_Click" Content="Trener"  Grid.Column="0" Grid.Row="1" Background="White">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button Height="30" Width="80" Name="btnCancel" Click="btnCancel_Click" Content="Nazad" Grid.Column="0" Grid.Row="2" Background="White">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+</Window>

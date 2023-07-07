@@ -1,0 +1,30 @@
+﻿<Window x:Class="SSS_Projekat_Miju.Windows.VlasnikWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SSS_Projekat_Miju.Windows"
+        mc:Ignorable="d"
+        Title="VlasnikWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Menu Margin="0,0,0,170">
+            <MenuItem Name="miTreneriRangiraniPoOcenama" Header="Najplaceniji treneri" Click="miTreneriRangiraniPoOcenama_Click" Width="120"/>
+            <MenuItem Name="miTreneriRangiraniPoZaradi" Header="Najbolje Ocenjeni treneri" Click="miTreneriRangiraniPoZaradi_Click" Width="140"/>
+        </Menu>
+        <DataGrid CanUserAddRows="False" IsReadOnly="True"  Name="myDataGrid" Margin="0,55,0,0" Grid.ColumnSpan="2">
+            <DataGrid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+                    <GradientStop Color="#718dbc" Offset="0.1" />
+                    <GradientStop Color="#f6e518" Offset="1.2" />
+                </LinearGradientBrush>
+            </DataGrid.Background>
+        </DataGrid>
+        <Button Name="btnOdjava" Click="btnOdjava_Click" Margin="304,377,376,10" Content="Odjava">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>

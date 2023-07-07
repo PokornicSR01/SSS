@@ -1,0 +1,38 @@
+﻿<Window x:Class="SSS_Projekat_Miju.Windows.TrenerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SSS_Projekat_Miju.Windows"
+        mc:Ignorable="d"
+        Title="TrenerWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Menu Margin="0,0,0,170">
+            <MenuItem Name="miDodajTermin" Header="Dodaj Termin" Click="miDodajTermin_Click" Width="90"/>
+            <MenuItem Name="miObrisiTermin" Header="Obrisi Termin" Click="miObrisiTermin_Click" Width="90"/>
+            <MenuItem Name="miIzmeniTermin" Header="Izmeni Termin" Click="miIzmeniTermin_Click" Width="90"/>
+            <MenuItem Name="miTermini" Header="Termini" Click="miTermini_Click" Width="auto"/>
+            <MenuItem Name="miOsmisliTrening" Header="Osmisli Trening" Click="miOsmisliTrening_Click" Width="90"/>
+            <MenuItem Name="miTreningUzivo" Header="Trening uzivo" Click="miTreningUzivo_Click" Width="90"/>
+            <MenuItem Name="miMojiKlijenti" Header="Moji Klijenti" Click="miMojiKlijenti_Click" Width="90"/>
+            <MenuItem Name="miOceniKlijenta" Header="Oceni klijenta" Click="miOceniKlijenta_Click" Width="90"/>
+        </Menu>
+        <DataGrid CanUserAddRows="False" IsReadOnly="True" Name="myDataGrid" Margin="0,34,0,0">
+            <DataGrid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+                    <GradientStop Color="#81c1cb" Offset="0.1" />
+                    <GradientStop Color="#ee88af" Offset="1" />
+                </LinearGradientBrush>
+            </DataGrid.Background>
+        </DataGrid>
+        
+        
+        <Button Name="btnOdjava" Click="btnOdjava_Click" Margin="304,377,376,10" Content="Odjava">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>

@@ -1,0 +1,43 @@
+﻿<Window x:Class="SSS_Projekat_Miju.Windows.KlijentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SSS_Projekat_Miju.Windows"
+        mc:Ignorable="d"
+        Title="KlijentWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+            <GradientStop Color="#352d77" Offset="0.25" />
+            <GradientStop Color="#b81254" Offset="1.5" />
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Menu Margin="0,0,0,170">
+            <MenuItem Name="miSviTreneri" Header="Treneri" Click="miSviTreneri_Click" Width="auto"/>
+            <MenuItem Name="miTreneroviTermini" Header="Termini" Click="miTreneroviTermini_Click" Width="auto"/>
+            <MenuItem Name="miRezervisiTermin" Header="Rezervisi/Otkazi" Click="miRezervisiTermin_Click" Width="auto"/>
+            <MenuItem Name="miUplatiNovac" Header="Uplati Novac" Click="miUplatiNovac_Click" Width="auto"/>
+            <MenuItem Name="miOceniTrenera" Header="Oceni Trenera" Click="miOceniTrenera_Click" Width="auto"/>
+            <MenuItem Name="miMojiTermini" Header="MojiTermini" Click="miMojiTermini_Click" Width="auto"/>
+            <MenuItem Name="miTreningUzivo" Header="Trening uzivo" Click="miTreningUzivo_Click" Width="90"/>
+            <MenuItem Name="miMojiTreneri" Header="Moji Treneri" Click="miMojiTreneri_Click" Width="90"/>
+            <MenuItem Name="miMojiPodaci" Header="Moji Podaci" Click="miMojiPodaci_Click" Width="90"/>
+        </Menu>
+        <DataGrid CanUserAddRows="False" IsReadOnly="True" Name="myDataGrid" Margin="0,55,0,0" Grid.ColumnSpan="2">
+            <DataGrid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+                    <GradientStop Color="#352d77" Offset="0.1" />
+                    <GradientStop Color="#b81254" Offset="1" />
+                </LinearGradientBrush>
+            </DataGrid.Background>
+        </DataGrid>
+        <Button Name="btnOdjava" Click="btnOdjava_Click" Margin="304,377,376,10" Content="Odjava">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
